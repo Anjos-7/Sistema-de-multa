@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1> Sistema de multas</h1>
+<img src="https://images.tcdn.com.br/img/img_prod/861159/placa_de_transito_regulamentacao_r_19f_velocidade_maxima_60_km_h_2791542_1_9d16c9ad5f4d074e759fbd4b26445590.jpg" alt="">
+    <style>
+img{
+width: 200px;
+height: 200px;
+    
+}
+
+
+    </style>
+
+<input type="number" name="vel" id="txvel">km/h
+<input type="button" value="verificar" onclick="calcular()">
+<div id="res">
+
+
+
+</div>
+
+<script>
+
+function calcular(){
+
+    var txvel=window.document.getElementById('txvel')
+   var vel=Number(txvel.value) 
+var res =window.document.querySelector("div#res")
+res.innerHTML =`Sua velocidade atual é de,  km/h  `  +vel
+
+
+
+
+if (vel>60){
+res.innerHTML += '<p>Voce esta <strong>multado</strong></p>'
+
+
+
+}
+}
+</script>
+
+</body>
+</html>
+
